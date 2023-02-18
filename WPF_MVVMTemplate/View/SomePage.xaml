@@ -1,0 +1,17 @@
+﻿<Page x:Class="WPF_MVVMTemplate.View.SomePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WPF_MVVMTemplate.View"
+      mc:Ignorable="d" 
+      d:DesignHeight="640" d:DesignWidth="480"
+      Title="SomePage"
+      DataContext="{Binding SomePageViewModel, Source={StaticResource ViewModelLocator}}">
+
+    <Button Height="100" Width="200" Content="Перейти на главную страницу." Command="{Binding ChangePage}">
+        <Button.Effect>
+            <DropShadowEffect Color="Black" BlurRadius="15" ShadowDepth="0" />
+        </Button.Effect>
+    </Button>
+</Page>
